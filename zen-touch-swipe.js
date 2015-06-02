@@ -138,5 +138,6 @@
   };
   $.fn.zenTouchSwipeStop = function() {
     $(this).off('touchstart touchend touchmove mousedown mouseup');
+    return this;
   }
 }( jQuery ));

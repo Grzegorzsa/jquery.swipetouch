@@ -13,7 +13,7 @@
       upTime = 0,
       touchCoords = false,
       options = {},
-      initial = {
+      defaults = {
         click: blank,
         dblClick: blank,
         tap: blank,
@@ -26,9 +26,9 @@
         scroll: true
       };
 
-    if (swipeActive()) initial.scroll = false;
+    if (swipeActive()) defaults.scroll = false;
 
-    options = mergeOptions(initial, input);
+    options = mergeOptions(defaults, input);
     el.on('touchstart',function(ev) {touchStart(ev, this); });
     el.on('touchend',function() { touchEnd(this); });
     el.on('touchmove', touchMoveHandler);

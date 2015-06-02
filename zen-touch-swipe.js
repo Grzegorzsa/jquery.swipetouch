@@ -29,11 +29,11 @@
     if (swipeActive()) defaults.scroll = false;
 
     options = mergeOptions(defaults, input);
-    el.on('touchstart',function(ev) {touchStart(ev, this); });
-    el.on('touchend',function() { touchEnd(this); });
-    el.on('touchmove', touchMoveHandler);
-    el.on('mousedown',function(ev) { mouseDown(ev, this); });
-    el.on('mouseup',function(ev) { mouseUp(ev, this); });
+      el.on('touchstart',function(ev) {touchStart(ev, this) })
+      .on('touchend',function() { touchEnd(this) })
+      .on('touchmove', touchMoveHandler)
+      .on('mousedown',function(ev) { mouseDown(ev, this) })
+      .on('mouseup',function(ev) { mouseUp(ev, this) });
 
     function mergeOptions(obj1,obj2){
       var out = {}, attr;
@@ -99,7 +99,7 @@
       }
     }
 
-    function blank(){};
+    function blank(){}
 
     function mouseDown(e, that) {
       var offset;

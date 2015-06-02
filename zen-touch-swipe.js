@@ -131,7 +131,7 @@
     }
 
     function touchMoveHandler(ev) {
-      ev.preventDefault();
+      if (!options.scroll) ev.preventDefault();
       touchCoords = ev.originalEvent.targetTouches[0];
     }
     return this;

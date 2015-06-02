@@ -33,7 +33,7 @@
       .on('touchend',function() { touchEnd(this) })
       .on('mousedown',function(ev) { mouseDown(ev, this) })
       .on('mouseup',function(ev) { mouseUp(ev, this) });
-    if (!options.scroll) el.on('touchmove', touchMoveHandler);
+    if (swipeActive()) el.on('touchmove', touchMoveHandler);
 
       function mergeOptions(obj1,obj2){
       var out = {}, attr;

@@ -31,11 +31,11 @@
     options = mergeOptions(defaults, input);
       el.on('touchstart',function(ev) {touchStart(ev, this) })
       .on('touchend',function() { touchEnd(this) })
-      .on('touchmove', touchMoveHandler)
       .on('mousedown',function(ev) { mouseDown(ev, this) })
       .on('mouseup',function(ev) { mouseUp(ev, this) });
+    if (!options.scroll) el.on('touchmove', touchMoveHandler);
 
-    function mergeOptions(obj1,obj2){
+      function mergeOptions(obj1,obj2){
       var out = {}, attr;
       for (attr in obj1) { out[attr] = obj1[attr]; }
       for (attr in obj2) { out[attr] = obj2[attr]; }
@@ -131,7 +131,7 @@
     }
 
     function touchMoveHandler(ev) {
-      if (!options.scroll) ev.preventDefault();
+      ev.preventDefault();
       touchCoords = ev.originalEvent.targetTouches[0];
     }
     return this;

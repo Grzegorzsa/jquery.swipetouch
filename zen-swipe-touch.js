@@ -3,7 +3,7 @@
   function timestamp() {
     return new Date().getTime();
   }
-  $.fn.zenTouchSwipe = function(input) {
+  $.fn.zenSwipeTouch = function(input) {
     var el = $(this),
       downX = 0,
       downY = 0,
@@ -136,7 +136,7 @@
     }
     return this;
   };
-  $.fn.zenTouchSwipeStop = function() {
+  $.fn.zenSwipeTouchStop = function() {
     $(this).off('touchstart touchend touchmove mousedown mouseup');
     return this;
   }

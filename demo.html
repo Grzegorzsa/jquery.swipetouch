@@ -42,34 +42,34 @@
       });
     });
 
-    function con(str) {
+    function output(str) {
       var obj = $('#my_elem'),
           text = obj.html();
       obj.html(str + '<br>' + text);
     }
     function clicked() {
-      con('click');
+      output('click');
     }
     function dblclicked() {
-      con('double click');
+      output('double click');
     }
     function swipedLeft() {
-      con('swipe left');
+      output('swipe left');
     }
     function swipedRight() {
-      con('swipe right');
+      output('swipe right');
     }
     function swipedUp() {
-      con('swipe up');
+      output('swipe up');
     }
     function swipedDown() {
-      con('swipe down');
+      output('swipe down');
     }
     function tapped() {
-      con('single tap');
+      output('single tap');
     }
     function dbltapped() {
-      con('double tap');
+      output('double tap');
     }
   </script>
 </head>
@@ -94,8 +94,7 @@
   <p>scroll (default: false) - enable page scrolling while swiping element.</p>
   <p>threshold (default: 20) - min. number of pixels needed for triggering swipe event.</p>
   <h2>Details:</h2>
-  <p>Click events in this plugin do not trigger tap events on mobile devices (unlike a regular jQuery click events).</p>
+  <p>Click events in this plugin do not trigger tap events on mobile devices (unlike regular jQuery click events).</p>
 </div>
-
 </body>
 </html>

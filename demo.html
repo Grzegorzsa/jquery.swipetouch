@@ -24,6 +24,10 @@
       cursor: pointer;
       overflow-y: scroll;
     }
+    pre {
+      padding: 1em;
+      background-color: #eee;
+    }
   </style>
   <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="jquery.swipetouch.js"></script>
@@ -83,15 +87,19 @@
     <p>Click here with mouse or tap / swipe on your mobile devices.</p>
   </div>
   <h2>Usage</h2>
-  <p>$("#my_elem").swipeTouch(eventHandlers/options)</p>
-  <p>$("#my_elem").swipeTouch({swipeLeft:swipeLeftHandler, dblclick:dblClickHandler}) - attach event handlers to the element. </p>
+  <p>$("#my_elem").swipeTouch(eventHandlers/options) - attach event handlers to the element.</p>
   <p>$("#my_elem").swipeTouchStop() - detach event handlers from the element. </p>
   <h2>Example</h2>
-  <p>$("#my_elem").swipeTouch({swipeLeft:function(){alert("Swiped left!!!")}}) - attach swipeLeft event handler to the element. </p>
+  <p> Attach swipeLeft and swipeRight event handlers to the element with threshold option set to 40px.</p>
+  <p><pre>$("#my_elem").swipeTouch({
+    swipeLeft: function(){alert("Swiped left!!!")},
+    swipeRight: function(){alert("Swiped right!!!")},
+    threshold:40,
+})</pre> </p>
   <h2>Available event handlers:</h2>
   <p>swipeLeft, swipeRight, swipeUp, swipeDown, click, dblClick, tap, dblTap, touchStart, touchEnd, mouseDown, mouseUp</p>
   <h2>Available options:</h2>
-  <p>scroll (default: false) - enable page scrolling while swiping element.</p>
+  <p>scroll (default: false) - enable page scrolling while swiping an element.</p>
   <p>threshold (default: 20) - min. number of pixels needed for triggering swipe event.</p>
   <h2>Details:</h2>
   <p>Click events in this plugin do not trigger tap events on mobile devices (unlike regular jQuery click events).</p>

@@ -1,9 +1,12 @@
-/*! Zen Touch-Swipe v 1.00 by Grzegorz Sarzyński | (c) 2015 zen-dev.pl */
+/*! Copyright (c) 2015 Grzegorz Sarzyński (http://zen-dev.pl)
+ * Licensed under the GPL License.
+ * Version: 1.0.3
+ */
 (function ( $ ) {
   function timestamp() {
     return new Date().getTime();
   }
-  $.fn.zenSwipeTouch = function(input) {
+  $.fn.swipeTouch = function(input) {
     var el = $(this),
       downX = 0,
       downY = 0,
@@ -22,8 +25,12 @@
         swipeRight: blank,
         swipeUp: blank,
         swipeDown: blank,
+        touchStart: blank,
+        touchEnd: blank,
         threshold: 20,
-        scroll: true
+        scroll: true,
+        mouseDown: blank,
+        mouseUp: blank
       };
 
     if (swipeActive()) defaults.scroll = false;
@@ -58,6 +65,7 @@
       downTime = timestamp();
       downX = parseInt(e.originalEvent.touches[0].clientX - offset.left);
       downY = parseInt(e.originalEvent.touches[0].clientY - offset.top + $(window).scrollTop());
+      options.touchStart(e, that);
     }
 
     function touchEnd(that) {
@@ -97,9 +105,10 @@
           }
         }
       }
+      options.touchEnd(that);
     }
 
-    function blank(){}
+    function blank(a,b){}
 
     function mouseDown(e, that) {
       var offset;
@@ -110,6 +119,7 @@
         downY = parseInt(e.clientY - offset.top + $(window).scrollTop());
         downTime = timestamp();
       }
+      options.mouseDown(e, that);
     }
 
     function mouseUp(e, that) {
@@ -128,6 +138,7 @@
           }
         }
       }
+      options.mouseUp(e, that);
     }
 
     function touchMoveHandler(ev) {
@@ -136,7 +147,7 @@
     }
     return this;
   };
-  $.fn.zenSwipeTouchStop = function() {
+  $.fn.swipeTouchStop = function() {
     $(this).off('touchstart touchend touchmove mousedown mouseup');
     return this;
   }

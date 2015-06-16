@@ -6,6 +6,7 @@ The library allows you to handle mouse and touch events independently.
 ## Usage
 
 $("#my_elem").swipeTouch(handlers/options) - attach event handlers to the element.
+
 $("#my_elem").swipeTouchStop() - detach event handlers from the element. 
 
 
@@ -28,4 +29,5 @@ swipeLeft, swipeRight, swipeUp, swipeDown, click, dblClick, tap, dblTap, touchSt
 ## Available options:
 
 scroll (default: false) - enable page scrolling while swiping an element.
+
 threshold (default: 20) - min. number of pixels needed for triggering swipe event.

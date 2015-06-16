@@ -1,6 +1,6 @@
 # jQuery.swipetouch
 
-Lightweit and hight performance jQuery plugin to handle touch, swipe and click events
+Lightweit and hight performance jQuery plugin to handle touch, swipe and click events.
 The library allows you to handle mouse and touch events independently.
 
 ## Usage

@@ -13,7 +13,7 @@
       max-width: 1000px;
       width: 100%;
       margin: 0 auto;
-      padding: 0 1em;
+      padding: 0 1em 2em 0;
       box-sizing: border-box;
     }
     #my_elem {
@@ -87,7 +87,7 @@
     <p>Click here with mouse or tap / swipe on your mobile devices.</p>
   </div>
   <h2>Usage</h2>
-  <p>$("#my_elem").swipeTouch(eventHandlers/options) - attach event handlers to the element.</p>
+  <p>$("#my_elem").swipeTouch(handlers/options) - attach event handlers to the element.</p>
   <p>$("#my_elem").swipeTouchStop() - detach event handlers from the element. </p>
   <h2>Example</h2>
   <p> Attach swipeLeft and swipeRight event handlers to the element with threshold option set to 40px.</p>
@@ -96,13 +96,11 @@
     swipeRight: function(){alert("Swiped right!!!")},
     threshold:40
 })</pre> </p>
-  <h2>Available evens:</h2>
+  <h2>Available events:</h2>
   <p>swipeLeft, swipeRight, swipeUp, swipeDown, click, dblClick, tap, dblTap, touchStart, touchEnd, mouseDown, mouseUp</p>
   <h2>Available options:</h2>
   <p>scroll (default: false) - enable page scrolling while swiping an element.</p>
   <p>threshold (default: 20) - min. number of pixels needed for triggering swipe event.</p>
-  <h2>Details:</h2>
-  <p>Click events in this plugin do not trigger tap events on mobile devices (unlike regular jQuery click).</p>
 </div>
 </body>
 </html>

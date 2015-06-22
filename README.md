@@ -29,3 +29,7 @@ swipeLeft, swipeRight, swipeUp, swipeDown, click, dblClick, tap, dblTap, touchSt
 
 scroll (default: false) - enable page scrolling while swiping an element.  
 threshold (default: 20) - min. number of pixels needed for triggering swipe event.
+
+## Download:
+
+[jquery.swipetouch-master.zip](https://github.com/Grzegorzsa/jquery.swipetouch/archive/master.zip)

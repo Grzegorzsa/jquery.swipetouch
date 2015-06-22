@@ -33,3 +33,7 @@ threshold (default: 20) - min. number of pixels needed for triggering swipe even
 ## Download:
 
 [jquery.swipetouch-master.zip](https://github.com/Grzegorzsa/jquery.swipetouch/archive/master.zip)
+
+## Online demo:
+
+[jquery-swipe-touch.zen-dev.pl](http://jquery-swipe-touch.zen-dev.pl/)

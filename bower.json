@@ -6,6 +6,10 @@
   "authors": [
     "Grzegorz Sarzynski <greg.syz@gmail.com>"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Grzegorzsa/jquery.swipetouch.git"
+  },
   "description": "Lightweight and high performance jQuery plugin to handle touch, swipe and click events.",
   "moduleType": [
     "globals"
